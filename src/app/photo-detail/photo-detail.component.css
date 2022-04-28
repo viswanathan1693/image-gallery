@@ -1,0 +1,14 @@
+.box-shadow {
+  box-shadow: 0 2px 2px rgb(0 0 0 / 24%), 0 0 2px rgb(0 0 0 / 12%);
+}
+
+.demo-div {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  margin-bottom: 20px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}

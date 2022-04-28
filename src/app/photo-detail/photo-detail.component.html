@@ -1,0 +1,14 @@
+<app-loader-wrapper></app-loader-wrapper>
+<div class="container-fluid tm-container-content tm-mt-60">
+  <div class="row mb-4">
+    <h2 class="col-12 tm-text-primary">{{imgObj?.imgHoverName}}</h2>
+</div>
+<!-- <div class="row tm-mb-90">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <img src="{{imgObj?.bigImgPath}}" alt="Image" class="img-fluid">
+</div>
+</div> -->
+<div class="margin-auto demo-div box-shadow" style="width: 940px; min-height: 204px;">
+  <ng-image-slider [infinite]="true" [images]="imageObject" #nav></ng-image-slider>
+</div>
+</div>
