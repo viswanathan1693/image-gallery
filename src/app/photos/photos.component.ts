@@ -10,6 +10,10 @@ import { ImageService } from '../_services/image.service';
 })
 export class PhotosComponent implements OnInit {
   imgArray: Array<Partial<ImageObject>> = [];
+  page = 1;
+  pageSize = 8;
+  collectionSize = 0;
+
 
   constructor(@Inject(DOCUMENT) private document: Document, private imgService: ImageService) { }
 
@@ -19,7 +23,14 @@ export class PhotosComponent implements OnInit {
   }
 
   constructImgObject(){
-    this.imgArray = this.imgService.getImageObjects();
+    this.imgArray = this.imgService.getpaginatedImageObjects(this.page, this.pageSize);
+    this.collectionSize = this.imgService.getImageObjects().length;
+    console.log(this.imgArray);
+  }
+
+  pageChanged(event: any){
+    this.imgArray = [];
+    this.imgArray = this.imgService.getpaginatedImageObjects(this.page, this.pageSize);
   }
 
 }
